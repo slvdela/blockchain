@@ -4,12 +4,18 @@ var ArrayUtilities = function ArrayUtilities(){
 
   this.addToSet = addToSet;
 
+  /// Cette fonction
   function addToSet(set, newElement, fieldToMatch){
+    // set correspond au tableau du réseau 
     var found = false;
+
     set.forEach(function(elem){
       if(Array.isArray(fieldToMatch)){
+        // Ici, le paramètre fieldToMatch est un tableau
         var everyFieldMatches = 0;
+        // On va donc le parcourir :
         fieldToMatch.forEach(function(field){
+          // Pour chaque element du tableau, on va vérifier 
           if(elem[field] === newElement[field]){
             everyFieldMatches++;
           }

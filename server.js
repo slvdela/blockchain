@@ -40,7 +40,7 @@ router.post('/nodes/register', function(req, res, next) {
 });
 
 router.post('/transactions', function(req, res, next){
-
+  res.send(blockchain.newTransaction(req.headers.host,req.headers.host,10));
 });
 
 router.post('/checkChain', function(req, res, next){

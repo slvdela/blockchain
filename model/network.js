@@ -17,7 +17,9 @@ var network = function network(){
   }
 
   function registerNode(address){
+    // On va chercher à recuperer l'adresse IP et le port de la personne qui fait la requête
     var fixedAddress = addressUtilities.parseAddress(address);
+    // On ajoute l'ip si elle n'est pas déjà dedans 
     var found = arrayUtilities.addToSet(self.nodes, fixedAddress, ['host', 'port']);
     return !found;
   }
